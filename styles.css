@@ -12,7 +12,7 @@ header {
 section {
     display: flex;
     flex-direction: row;
-    padding: 20px
+    padding: 0px;
 }
 
 div {
@@ -36,6 +36,12 @@ footer {
     padding: 5px
 }
 
+.separator {
+    background: grey;
+    padding: 5px;
+    width: 97.5%;
+}
+
 section.feature-box {
     display: flex;
 }
@@ -47,7 +53,7 @@ a {
 
 a:hover {
     color: rgb(248, 248, 148);
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 a:link {
@@ -77,4 +83,12 @@ a:link {
 /* Same blink keyframe */
 @keyframes blink {
   50% { opacity: 0; }
+}
+
+.left {
+  justify-self: start; /* Left align */
+}
+
+.right {
+  justify-self: end; /* Right align */
 }
