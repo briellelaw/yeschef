@@ -9,15 +9,14 @@ header {
     color: white;
 }
 
-section {
-    display: flex;
-    flex-direction: row;
-    padding: 0px;
+h2, h3 {
+    font-family: 'Averia Sans Libre', cursive;
+    padding: 20px;
 }
 
-div {
-    margin: auto;
-    width: 100px;
+p {
+    font-family: 'Averia Sans Libre', cursive;
+    padding-left: 20px;
 }
 
 ul {
@@ -29,21 +28,19 @@ ul {
 li {
     display: inline-block;
     margin: 20px;
+    font-family: 'Averia Sans Libre', cursive;
 }
 
 footer {
     background: grey;
-    padding: 5px
+    padding: 20px;
+    margin: 20px;
 }
 
 .separator {
     background: grey;
     padding: 5px;
-    width: 97.5%;
-}
-
-section.feature-box {
-    display: flex;
+    margin: 20px;
 }
 
 a {
@@ -96,4 +93,65 @@ a:link {
 .nav-link.active {
   color:  rgb(248, 248, 148);
   font-weight: bold;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px; /* Space between cards */
+}
+
+.card {
+  width: 27%;
+  height: 350px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
+  margin: 20px;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  font-size: 1.25em;
+}
+
+.card-content p {
+  color: #555;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(185px, 0.5fr));
+  gap: 220px;
+}
+
+.image-grid img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  margin-top: 20px
 }
