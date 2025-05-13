@@ -49,3 +49,18 @@ document.addEventListener('DOMContentLoaded', function() {
       pageTitle.textContent = 'Contact Us';
     }
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('.nav-link');
+    let currentUrl = window.location.pathname.replace(/^\//, '');
+    currentUrl = currentUrl.replace(/^pages\//, '');
+
+    links.forEach(link => {
+      console.log(link);
+      console.log("currentURL: ", currentUrl);
+      console.log(link.getAttribute('href'));
+      if (link.getAttribute('href') === currentUrl) {
+        link.classList.add('active');
+      }
+    });
+  }); 
