@@ -52,13 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.nav-link');
-    let currentUrl = window.location.pathname.replace(/^\//, '');
-    currentUrl = currentUrl.replace(/^pages\//, '');
+    let currentUrl = window.location.pathname.split('/').pop();
+    console.log("pathName:", window.location.pathname)
+    console.log("currentURL: ", currentUrl);
 
     links.forEach(link => {
-      console.log(link);
-      console.log("currentURL: ", currentUrl);
-      console.log(link.getAttribute('href'));
+      console.log("link:", link);
+      console.log("href:", link.getAttribute('href'));
       if (link.getAttribute('href') === currentUrl) {
         link.classList.add('active');
       }
