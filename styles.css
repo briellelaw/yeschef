@@ -171,6 +171,7 @@ a:link {
   height: 100%;
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
   top:0px;
   opacity: 0;
